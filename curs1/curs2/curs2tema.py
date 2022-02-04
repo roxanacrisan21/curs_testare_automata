@@ -137,13 +137,13 @@
 # else :
 #     print(f'x = {x}, y = {y}, z = {z} sunt egale')
 #
-# # 15. x, y, z - reprezinta unghiurile unui triunghi
-# # Verifica si afiseaza daca triunghiul este valid sau nu
-# x = int(input('Scrieti primul unghi : '))
-# y = int(input('Scrieti al doilea unghi : '))
-# z = int(input('Scrieti al treilea unghi : '))
-# suma = x + y + z # suma celor 3 unghiuri
-# if x < 180 and x > 0 and y < 180 and y > 0 and z < 180 and z > 0 and suma == 180 :
-#     print('Triunghiul este valid')
-# else :
-#     print('Triunghiul nu este valid')
+# 15. x, y, z - reprezinta unghiurile unui triunghi
+# Verifica si afiseaza daca triunghiul este valid sau nu
+x = int(input('Scrieti primul unghi : '))
+y = int(input('Scrieti al doilea unghi : '))
+z = int(input('Scrieti al treilea unghi : '))
+suma = x + y + z # suma celor 3 unghiuri
+if x < 180 and x > 0 and y < 180 and y > 0 and z < 180 and z > 0 and suma == 180 :
+    print('Triunghiul este valid')
+else :
+    print('Triunghiul nu este valid')
