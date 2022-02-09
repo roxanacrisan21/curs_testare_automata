@@ -5,7 +5,7 @@
 #
 # # 2. Verifica si afiseaza daca x este numar pozitiv sau nu
 # x = int(input('Dati un numar x : '))
-# if x >= 0 :
+# if x > 0 :
 #     print(f'{x} este numar pozitiv')
 # else :
 #     print(f'{x} nu este numar pozitiv')
@@ -58,7 +58,7 @@
 # z = int(input('Dati un numar z : '))
 # if x == y or y == z or x == z :
 #     print('Triunghiul este isoscel')
-# elif x ==y and y == z :
+# elif x == y and x != z or y == z and y != z or x == z and x != y:
 #     print ('Triunghiul este isoscel')
 # else :
 #     print('Triunghiul este oarecare')
@@ -66,11 +66,19 @@
 # # 9. Citeste o litera de la tastatura
 # # Verifica si afiseaza daca este vocala sau nu
 # l = input('Scrie o litera : ')
-# if l == 'a' or l == 'e' or l == 'i' or l == 'o' or l == 'u' :
+# if l == 'a' or l == 'e' or l == 'i' or l == 'o' or l == 'u' or l == 'A' or l == 'E' or l == 'I' or l == 'O
+#  or l == 'U':
 #     print(f'Litera {l} este o vocala')
 # else :
 #     print(f'Litera {l} nu este o vocala')
-#
+
+# # sau altfel (pentru litere mari/mici
+
+# if l.lower() == 'a' or l.lower() == 'e' or l.lower() == 'i' or l.lower() == 'o' or l.lower() == 'u' :
+#     print('Este o vocala')
+# else :
+#     print('Nu este o vocala')
+
 # # 10. Transforma si printeaza notele din sistem românesc in sistem american dupa cum urmeaza
 # # Peste 9 => A
 # # Peste 8 => B
@@ -102,6 +110,13 @@
 #     print(f'Numarul {x} are minim 4 cifre')
 # else :
 #     print(f'Numarul {x} nu are minim 4 cifre')
+
+# # sau altfel
+# x = int(input('Scrieti un numar '))
+# if x > 999 :
+#      print('Numarul are minim 4 cifre si este ', x)
+# else:
+#      print(x,'nu are minim 4 cifre' )
 #
 # # 12. Verifica daca x are exact 6 cifre
 # if nr_cifre == 6 :
@@ -139,11 +154,11 @@
 #
 # 15. x, y, z - reprezinta unghiurile unui triunghi
 # Verifica si afiseaza daca triunghiul este valid sau nu
-x = int(input('Scrieti primul unghi : '))
-y = int(input('Scrieti al doilea unghi : '))
-z = int(input('Scrieti al treilea unghi : '))
-suma = x + y + z # suma celor 3 unghiuri
-if x < 180 and x > 0 and y < 180 and y > 0 and z < 180 and z > 0 and suma == 180 :
-    print('Triunghiul este valid')
-else :
-    print('Triunghiul nu este valid')
+# x = int(input('Scrieti primul unghi : '))
+# y = int(input('Scrieti al doilea unghi : '))
+# z = int(input('Scrieti al treilea unghi : '))
+# suma = x + y + z # suma celor 3 unghiuri
+# if x < 180 and x > 0 and y < 180 and y > 0 and z < 180 and z > 0 and suma == 180 :
+#     print('Triunghiul este valid')
+# else :
+#     print('Triunghiul nu este valid')
