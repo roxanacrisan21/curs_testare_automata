@@ -133,11 +133,17 @@ print('OPTINAL : ')
 # Afisati ‘mai aveti z schimbari’
 # Testati codul cu diferite valori
 jucatori = ['Andrei', 'Razvan', 'Florin', 'Mihai', 'Alexandru'] # Declara o Lista cu 5 jucatori
+rezerva = ['Alin', 'Iulian' , 'Cristi'] # Declara o lista cu jucatori de rezerva
 schimbari_efectuate = 0 # Schimbari_efectuate = va jucati voi cu valori diferite
 if 'Mihai' in jucatori and schimbari_efectuate <= 3 : # Daca Jucatorul x e in teren si mai avem schimbari la dispozitie
-    jucatori.remove('Mihai') and jucatori.insert(0, 'Alin') # Stergem jucatorul scos din lista si adaugam jucatorul intrat
+    jucatori.remove('Mihai') # Stergem jucatorul scos din lista
+    jucatori.insert(0, 'Alin') # Adaugam jucatorul intrat
+    rezerva.remove('Alin') # Stergem jucatorul intrat din lista de rezerva
+    rezerva.insert(0, 'Mihai') # Adaugam jucatorul iesit la lista de rezerva
     schimbari_efectuate = schimbari_efectuate + 1 # incrementare nr schimbari
     print(f'A iesit Mihai, a intrat Alin, mai avem {3 - schimbari_efectuate} schimbari')
+    print(f'Acum jucatorii sunt : {jucatori}')
+    print(f'Acum lista de rezerva este : {rezerva}')
 else : # Daca jucatorul nu e in teren:
     print('Nu se poate efectua schimbare deoarece jucatorul nu este in teren')
 print(f'Mai avem {3 - schimbari_efectuate} schimbari') # cate schimbari mai avem din maxim 3
