@@ -8,88 +8,88 @@
 #       - CANCEL if the payment is invalid, thereby setting the order to the state of CANCELED
 # For orders in an APPROVED state, the shop personnel choose the SHIP action after the goods are actually sent, thereby setting the order to a state of SHIPPED
 
-# order_value = int(input('Enter the order value : '))
-# process = input('Choose the next step, enter SUBMIT if you want to buy : ')
-# if process == 'SUBMIT' :
-#     if order_value <= 100 :
-#         print('The order is APPROVED')
-#     else :
-#         payment_confirmation = input('Choose payment confirmation YES of NO : ')
-#         print('The order is PENDING and payment confirmation is verified')
-#         if payment_confirmation == 'YES' :
-#             print('The payment is confirmed and the order is APPROVED')
-#         elif payment_confirmation == 'NO' :
-#             print('The payment is invalid and the order is CANCELED')
-#         else :
-#             print('Please choose yes or no for payment_confirmation')
-# else :
-#     print('Please enter the process to SUBMIT')
+order_value = int(input('Enter the order value : '))
+process = input('Choose the next step, enter SUBMIT if you want to buy : ')
+if process == 'SUBMIT' :
+    if order_value <= 100 :
+        print('The order is APPROVED')
+    else :
+        payment_confirmation = input('Choose payment confirmation YES of NO : ')
+        print('The order is PENDING and payment confirmation is verified')
+        if payment_confirmation == 'YES' :
+            print('The payment is confirmed and the order is APPROVED')
+        elif payment_confirmation == 'NO' :
+            print('The payment is invalid and the order is CANCELED')
+        else :
+            print('Please choose yes or no for payment_confirmation')
+else :
+    print('Please enter the process to SUBMIT')
 
 
 # 2. Company X sells merchandise to wholesale and retail outlets. Wholesale customers receive a two percent discount on all orders.
 # The company also encourages both wholesale and retail customers to pay cash on delivery by offering a two percent discount for this method of payment.
 # Another two percent discount is given on orders of 50 or more units. Each column represents a certain type of order.
 
-# buyer = input('Are you a wholesale or retail? ')
-# price = int(input('Enter the price : '))
-# pay = input('Enter the method pay (cash/card) :')
-# order = int(input('Enter the numbers of units to buy : '))
-# if buyer == 'wholesale':
-#     price = price * 0.98 # 2% discount
-#     print(f'Price for wholesale is {price}')
-# else:
-#     price = price
-#     print(f'Price for retail is {price}')
-# if pay == 'cash' :
-#     price = price * 0.98 # 2% discount
-#     print(f'Price if payed cash on delivery is {price}')
-# else :
-#     price = price
-#     print(f'Price if payed by card is {price}')
-# if order >= 50 :
-#     price = price * 0.98 # 2% discount
-#     print(f'The final price if more then 50 units to buy is {price}')
-# else :
-#     price = price
-#     print(f'The final price if less then 50 units to buy is {price}')
+buyer = input('Are you a wholesale or retail? ')
+price = int(input('Enter the price : '))
+pay = input('Enter the method pay (cash/card) :')
+order = int(input('Enter the numbers of units to buy : '))
+if buyer == 'wholesale':
+    price = price * 0.98 # 2% discount
+    print(f'Price for wholesale is {price}')
+else:
+    price = price
+    print(f'Price for retail is {price}')
+if pay == 'cash' :
+    price = price * 0.98 # 2% discount
+    print(f'Price if payed cash on delivery is {price}')
+else :
+    price = price
+    print(f'Price if payed by card is {price}')
+if order >= 50 :
+    price = price * 0.98 # 2% discount
+    print(f'The final price if more then 50 units to buy is {price}')
+else :
+    price = price
+    print(f'The final price if less then 50 units to buy is {price}')
 
 # 3. If a client has over 65 years, then it will be offered to him a discount of 15%.
 # Otherwise if the customer does not have over 65 years, if the person travels with at least one account they will have a discount of 10%
 # For both seniors and non seniors it will be applied an additional discount of 10% if they will travel during winter.
 # Also, for both seniors and non seniors it will be applied a 3% luxury fee if they will travel in the first class (in any season) or 1% handling fee otherwise.
 
-# client_age = int(input('The client age is : '))
-# travel_account = int(input('Enter the numbers of accounts : '))
-# travel_season = input('Enter the season for travel (summer/autumn/winter/spring) : ')
-# travel_class = int(input('Enter the class for traveling (enter 1 or 2) : '))
-# ticket_price = int(input('Enter the ticket price : '))
-#
-# if client_age > 65 :
-#     ticket_price = ticket_price * 0.90 # 10% discount for seniors
-#     print(f'Ticket price for senior is {ticket_price}')
-# else :
-#     ticket_price = ticket_price
-#     print(f'Ticket price for non-seniors is {ticket_price}')
-#     if travel_account >= 1 :
-#         ticket_price = ticket_price * 0.90 # 10% discount for non-seniors with at least one account
-#         print(f'Ticket price for non-seniors with at least one account is {ticket_price}')
-#     else :
-#         ticket_price = ticket_price
-#         print(f'Ticket price for non-seniors with no account is {ticket_price}')
-# if travel_season == 'winter' :
-#     ticket_price = ticket_price * 0.90 # 10% discount for travelling in winter
-#     print(f'Ticket price for traveling in winter is : {ticket_price}')
-# else :
-#     ticket_price = ticket_price
-#     print(f'Price for traveling in spring, summer or autumn is {ticket_price}')
-# if travel_class == 1 :
-#     ticket_price = ticket_price * 0.97 # 3% discount for 1st class
-#     print(f'Ticket price for traveling in 1st class is : {ticket_price}')
-# elif travel_class == 2 :
-#     ticket_price = ticket_price * 0.99 # 1% discount for 2nd class
-#     print(f'Ticket price for traveling in 2nd class is : {ticket_price}')
-# else :
-#     print('Please enter a valid traveling class (1 or 2)')
+client_age = int(input('The client age is : '))
+travel_account = int(input('Enter the numbers of accounts : '))
+travel_season = input('Enter the season for travel (summer/autumn/winter/spring) : ')
+travel_class = int(input('Enter the class for traveling (enter 1 or 2) : '))
+ticket_price = int(input('Enter the ticket price : '))
+
+if client_age > 65 :
+    ticket_price = ticket_price * 0.90 # 10% discount for seniors
+    print(f'Ticket price for senior is {ticket_price}')
+else :
+    ticket_price = ticket_price
+    print(f'Ticket price for non-seniors is {ticket_price}')
+    if travel_account >= 1 :
+        ticket_price = ticket_price * 0.90 # 10% discount for non-seniors with at least one account
+        print(f'Ticket price for non-seniors with at least one account is {ticket_price}')
+    else :
+        ticket_price = ticket_price
+        print(f'Ticket price for non-seniors with no account is {ticket_price}')
+if travel_season == 'winter' :
+    ticket_price = ticket_price * 0.90 # 10% discount for travelling in winter
+    print(f'Ticket price for traveling in winter is : {ticket_price}')
+else :
+    ticket_price = ticket_price
+    print(f'Price for traveling in spring, summer or autumn is {ticket_price}')
+if travel_class == 1 :
+    ticket_price = ticket_price * 0.97 # 3% discount for 1st class
+    print(f'Ticket price for traveling in 1st class is : {ticket_price}')
+elif travel_class == 2 :
+    ticket_price = ticket_price * 0.99 # 1% discount for 2nd class
+    print(f'Ticket price for traveling in 2nd class is : {ticket_price}')
+else :
+    print('Please enter a valid traveling class (1 or 2)')
 
 # BONUS EXERCISES (vor necesita cel mai probabil google si in functie de cat de complex vreti sa il faceti este posibil
 # sa necesite si notiuni pe care le vom acoperi la cursul urmator)

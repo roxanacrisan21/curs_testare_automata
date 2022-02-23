@@ -39,6 +39,7 @@ print(f'Lista ordonata cu varianta 1 este : {total1}')
 lista1.sort()
 print(f'Lista ordonata este : {lista1}')
 lista1.remove(0)
+# lista1.pop(0) # alta metoda
 print(f'Lista fara 0 este : {lista1}')
 
 # 5. Folosind un if verificati lista generata la ex3 si afisati
@@ -56,10 +57,18 @@ print(f'Lista stearsa este : {total1}')
 
 # 7. Copy paste la ex 5. Verificati inca o data.
 # Acum ar trebui sa se afiseze ca lista e goala
+
+# optiunea 1
 if total1 == [] :
     print('Lista este goala')
 else :
     print('Lista nu este goala')
+
+# optiunea 2
+# if len(total1) == 0 :
+#     print('Lista este goala')
+# else :
+#     print('Lista nu este goala')
 
 # 8. Avand dictionarul dict1 = {'Ana' : 8, 'Gigel' : 10, 'Dorel' : 5}
 # Folositi o functie ca sa afisati Elevii (cheile)
@@ -147,3 +156,24 @@ if 'Mihai' in jucatori and schimbari_efectuate <= 3 : # Daca Jucatorul x e in te
 else : # Daca jucatorul nu e in teren:
     print('Nu se poate efectua schimbare deoarece jucatorul nu este in teren')
 print(f'Mai avem {3 - schimbari_efectuate} schimbari') # cate schimbari mai avem din maxim 3
+
+# alta varianta
+# SCHIMBARI_MAXIME = 3
+# schimbari_efectuate = 0
+# schimbari_ramase = SCHIMBARI_MAXIME - schimbari_efectuate
+# echipa = {'j1','j2','j3','j4','j5'}
+# jucator_in = 'j6'
+# jucator_out = 'j1'
+# if jucator_out in echipa and schimbari_efectuate <SCHIMBARI_MAXIME:
+#     if jucator_in in echipa:
+#         print("Nu putem face schimbarea deoarece jucatorul introdus este deja in teren")
+#     else:
+#         echipa.remove(jucator_out)
+#         echipa.add(jucator_in)
+#         schimbari_ramase -= 1
+#         print(f"A intrat {jucator_in} si a iesit {jucator_out}. Mai aveti {schimbari_ramase} schimbari disponibile")
+#         print(f"Actuala echipa este {echipa}")
+# else:
+#     if schimbari_ramase<=0:
+#         print("Nu mai ai schimbari disponibile")
+#     print(f"Nu se poate efectua schimbarea deoarece jucatorul {jucator_in} nu este in teren")
