@@ -157,7 +157,7 @@ else : # Daca jucatorul nu e in teren:
     print('Nu se poate efectua schimbare deoarece jucatorul nu este in teren')
 print(f'Mai avem {3 - schimbari_efectuate} schimbari') # cate schimbari mai avem din maxim 3
 
-# alta varianta
+# alta varianta - data de trainer
 # SCHIMBARI_MAXIME = 3
 # schimbari_efectuate = 0
 # schimbari_ramase = SCHIMBARI_MAXIME - schimbari_efectuate

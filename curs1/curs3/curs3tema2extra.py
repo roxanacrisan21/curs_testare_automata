@@ -101,38 +101,26 @@ else :
 # If the person guesses the number they will receive a message: Congrats, you got it right!
 # The program will also receive as input if the player wants to play (yes/no)
 #
-# number = 3
-# play = input('Do you want to play? Please write yes or no : ')
-# number_left = int(3)
-#
-# if play == 'yes' :
-#     print('You want to play')
-#     # while number_left > 0 :
-#     #     guess_number = int(input('Please guess the correct number : '))
-#     #     if guess_number == number:
-#     #         print('Congrats, you got it right!')
-#     #     else :
-#     #         number_left = number_left - 1
-#     #         print(f'The number is wrong, you have {number_left} of tries left')
-#     #         if number_left == 0 :
-#     #             print('You lost the game, please try again ')
-#     #         else :
-#     #             print('Try again!')
-# # ??? Varianta de mai sus ma obliga sa introduc de 3 ori gresit, chiar daca intre timp bag numarul corect -> deci ceva nu e ok ???
-# #     for x in range (0, 3) :
-# #         guess_number = int(input('Please guess the correct number : '))
-# #         if guess_number == number:
-# #             print('Congrats, you got it right!')
-# #         else :
-# #             number_left = number_left - 1
-# #             print(f'The number is wrong, you have {number_left} of tries left')
-# #             if number_left == 0 :
-# #                 print('You lost the game, please try again ')
-# #             else :
-# #                 print('Try again!')
-# # ??? Varianta de mai sus ma obliga sa introduc exact de 3 ori chiar daca intre timp am introdus numarul corect -> deci ceva nu e ok ???
-# else :
-#     print("You don't want to play! Type yes if you want to play!")
+number = 3
+play = input('Do you want to play? Please write yes or no : ')
+number_left = int(3)
+
+if play == 'yes' :
+    print('You want to play')
+    for i in range (0, 3) :
+        guess_number = int(input('Please guess the correct number : '))
+        if guess_number == number:
+            print('Congrats, you got it right!')
+            break
+        else :
+            number_left = number_left - 1
+            print(f'The number is wrong, you have {number_left} of tries left')
+            if number_left == 0 :
+                print('You lost the game, please try again ')
+            else :
+                print('Try again!')
+else :
+    print("You don't want to play! Type yes if you want to play!")
 
 
 # 2. We have a movie cinema that runs movies every day. We can have information about the movie name and movie date,

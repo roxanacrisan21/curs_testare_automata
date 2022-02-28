@@ -46,13 +46,13 @@ for culoare in culori :
         print(f'Culoarea curenta este {culori[index]}')
 print(f'Noua lista este {culori}')
 
-# print('------------break-----------')
-# for i in range(len(culori)) :
-#     if culori[i] == 'magenta' :
-#         culori[i] = 'purpuriu'
-#         print(f'Lista curenta este {culori} ')
-#         break # se opreste dupa ce gaseste prima culoare magenta in lista, nu mai continua sa mai caute
-# print(f'Lista finala este {culori}')
+print('------------break-----------')
+for i in range(len(culori)) :
+    if culori[i] == 'magenta' :
+        culori[i] = 'purpuriu'
+        print(f'Lista curenta este {culori} ')
+        break # se opreste dupa ce gaseste prima culoare magenta in lista, nu mai continua sa mai caute
+print(f'Lista finala este {culori}')
 
 print('------------continue-----------')
 print(culori)
