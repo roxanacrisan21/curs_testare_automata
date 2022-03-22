@@ -1,5 +1,6 @@
 import math
 from datetime import datetime
+import pytz
 
 # Apelati functia de cel putin 2 ori cu valori diferite pentru a testa
 # Daca functia are return, printati raspunsul
@@ -13,6 +14,13 @@ def suma(a,b) :
 suma(2,3)
 suma(5,-4)
 
+# def suma1(a,b) :
+#     s =  a + b
+#     return s
+# a = int(input('Dati un numar : '))
+# b = int(input('Dati inca un numar : '))
+# print(suma1(a, b))
+
 # 2. Functie care sa returneze TRUE daca un numar este par, FALSE pt impar
 print('-----------2---------')
 def paritate(a):
@@ -23,6 +31,14 @@ def paritate(a):
 paritate(4)
 paritate(10)
 paritate(55)
+
+# def paritate1(a):
+#     if a % 2 == 0 :
+#         return True
+#     else :
+#         return False
+# a = int(input('Dati un numar : '))
+# print(f'Numarul {a} este par? {paritate1(a)}')
 
 # 3. Functie care returneaza numarul total de caractere din numele tau complet. (nume, prenume, nume_mijlociu)
 print('-----------3---------')
@@ -141,32 +157,45 @@ marime(5, -3)
 # 10. Functie care primeste un numar si un set de numere.
 # Printeaza ‘am adaugat numarul nou in set’ + returneaza True
 # Sau Printeaza ‘nu am adaugat numarul in set. Acesta exista deja’ + returneaza False
-print('-----------9---------NU MERGE BINE---------')
+print('-----------9---------------')
 def adaugare_nr(set_numere, numar):
     if numar in set_numere:
         print('Nu am adaugat numarul in set. acesta exista deja')
-        print('False')
+        return False
     else:
         print('Am adaugat numarul nou in set')
-        print('True')
+        return True
         set_numere.append(numar)
         print(f'Noul set de numere este : {set_numere}')
-adaugare_nr([1, 3, 6, 8], 9)
-adaugare_nr([1, 3, 6, 8], 3)
+print(adaugare_nr([1, 3, 6, 8], 9))
+print(adaugare_nr([1, 3, 6, 8], 3))
 
 # 11. Functie care primeste o luna din an si returneaza cate zile are acea luna
 print('-----------OPTIONALE---------')
 print('-----------11---------')
-def calendar(luna):
-    if luna == 'Ianuarie' or luna == 'Martie' or luna == 'Mai' or luna == 'Iulie' or luna == 'August' or luna == 'Octombrie' or luna == 'Decembrie':
+# def calendar(luna):
+#     if luna == 'Ianuarie' or luna == 'Martie' or luna == 'Mai' or luna == 'Iulie' or luna == 'August' or luna == 'Octombrie' or luna == 'Decembrie':
+#         print(f'Luna {luna} are 31 de zile')
+#     elif luna == 'Aprilie' or luna == ' Iunie' or luna == 'Septembrie' or luna == 'Noiembrie':
+#         print(f'Luna {luna} are 30 de zile')
+#     elif luna == 'Februarie':
+#         print(f'Luna {luna} are 28 sau 29 de zile')
+# calendar('Mai')
+# calendar('Februarie')
+# calendar('Septembrie')
+
+def calendar1(luna):
+    luna31 = ['Ianuarie', 'Martie', 'Mai', 'Iulie', 'August', 'Octombrie', 'Decembrie']
+    luna30 = ['Aprilie', 'Iunie', 'Septembrie', 'Noiembrie']
+    if luna in luna31:
         print(f'Luna {luna} are 31 de zile')
-    elif luna == 'Aprilie' or luna == ' Iunie' or luna == 'Septembrie' or luna == 'Noiembrie':
+    elif luna in luna30:
         print(f'Luna {luna} are 30 de zile')
-    elif luna == 'Februarie':
+    else :
         print(f'Luna {luna} are 28 sau 29 de zile')
-calendar('Mai')
-calendar('Februarie')
-calendar('Septembrie')
+calendar1('Mai')
+calendar1('Februarie')
+calendar1('Septembrie')
 
 # 12. Functie calculator care sa returneze 4 valori
 # Suma, diferenta, inmultirea, impartirea a 2 numere
@@ -294,5 +323,5 @@ reducerea(100, 110)
 
 # 19. Functie care sa afiseze data si ora curenta din China
 print('-------------19---------')
-today = datetime.today()
-print("Today's date:", today) # data si ora actuala din Romania! nu din China!
+today = datetime.now(pytz.timezone('Asia/Hong_Kong'))
+print("Today's date:", today)
