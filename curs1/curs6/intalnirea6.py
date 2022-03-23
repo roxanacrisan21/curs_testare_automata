@@ -2,7 +2,7 @@
 
 class Masina:
     # fields/attribute
-    culoare = "Galben" #daca dam o valoare default nu mai e nevoie de constructor
+    culoare = "Galben" #daca dam o valoare default si nu vrem sa o schimbam, nu mai e nevoie de constructor
     marca = None
     model = None
     viteza = 0
@@ -25,7 +25,7 @@ class Masina:
         return f'Trebuie sa acceleram cu {viteza} de km' # avem nevoie de return in cazul asta specific pentru ca mai jos am folosit in print rezultatul functiei
 
     def paint(self, colour):
-        self.culoare= colour
+        self.culoare = colour
 
     def start_masina(self):
         print("Start masina")
