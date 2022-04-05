@@ -8,6 +8,8 @@ from abc import ABC, abstractmethod
 # Contine o metoda abstracta aria
 # Contine o metoda a clasei descrie() - aceasta printeaza pe ecran ‘Cel mai probabil am colturi’
 #
+
+print('--------tema-------')
 class FormaGeometrica(ABC): # clasa abstracta pt ca are ABC
     PI = 3.14
 
