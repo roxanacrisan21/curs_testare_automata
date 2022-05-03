@@ -47,18 +47,38 @@ from selenium.webdriver.common.by import By # pt accesarea elementelor din inter
 # chrome.quit()
 
 
+# s = Service(ChromeDriverManager().install())
+# chrome = webdriver.Chrome(service=s)
+# chrome.maximize_window()
+# chrome.get('https://jules.app/sign-in')
+#
+# # selector by TAG
+# chrome.find_element(By.TAG_NAME, 'input').send_keys('roxana@crisan')
+# lista_taguri = chrome.find_elements(By.TAG_NAME, 'input')
+# lista_taguri[1].send_keys('password')
+# print(len(lista_taguri))
+# sleep(3)
+# lista_taguri.clear()
+# sleep(3)
+# chrome.quit()
+
+
 s = Service(ChromeDriverManager().install())
 chrome = webdriver.Chrome(service=s)
 chrome.maximize_window()
-
-chrome.get('https://jules.app/sign-in')
-
-# selector by TAG
-chrome.find_element(By.TAG_NAME, 'input').send_keys('roxana@crisan')
-lista_taguri = chrome.find_elements(By.TAG_NAME, 'input')
-lista_taguri[1].send_keys('password')
-print(len(lista_taguri))
+chrome.get('https://formy-project.herokuapp.com/')
+chrome.find_element(By.XPATH, '/html/body/div/div/li[1]/a').click()
 sleep(3)
-lista_taguri.clear()
-sleep(3)
+# selector by Class
+# chrome.find_element(By.CLASS_NAME, 'form-group').send_keys('roxana@crisan')
+# gasim mai multe si punem in lista
+lista_elemente_clasa = chrome.find_elements(By.CLASS_NAME, 'form-group')
+
+lista_elemente_clasa[1].send_keys('Str Eliade')
+lista_elemente_clasa[2].send_keys('Str Mircea')
+lista_elemente_clasa[3].send_keys('Cluj')
+lista_elemente_clasa[4].send_keys('Cluj-Napoca')
+lista_elemente_clasa[6].send_keys('Romania')
+
+sleep(10)
 chrome.quit()

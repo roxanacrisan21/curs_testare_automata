@@ -117,10 +117,10 @@ class Login(TestCase):
 #         actual_url = self.chrome.current_url
 #         expected_url = 'https://the-internet.herokuapp.com/secure'
 #         self.assertEqual(expected_url, actual_url, 'URL is incorrect')
-#         elem = WebDriverWait(self.chrome, 20).until(EC.presence_of_element_located((By.CLASS_NAME, "flash success")))
-#         elem = self.chrome.find_element(By.CLASS_NAME, "flash success")
+#         elem = WebDriverWait(self.chrome, 20).until(EC.presence_of_element_located((By.CLASS_NAME, 'flash success')))
+#         elem = self.chrome.find_element(By.CLASS_NAME, 'flash success')
 #         self.assertTrue(elem.is_displayed(), 'Submit btn nu e vizibil')
-#         actual_mess = self.chrome.find_element(By.CLASS_NAME, "flash success").text
+#         actual_mess = self.chrome.find_element(By.CLASS_NAME, 'flash success').text
 #         expected_mess = 'secure area' #cum caut sa vad daca textul contine si nu este egal?
 #         self.assertEqual(expected_mess, actual_mess, 'Page title is incorrect')
 #

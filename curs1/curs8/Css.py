@@ -34,8 +34,7 @@ chrome.find_element(By.CSS_SELECTOR, 'input[placeholder="Enter last name"]').sen
 sleep(2)
 
 # selector by CSS - atribut=valoare partiala + parinte -> copil
-chrome.find_element(By.CSS_SELECTOR, 'div input[placeholder*="last name"]').send_keys(
-    'inpetrean')  # * = marcator pentru valoare partiala a placeholderului
+chrome.find_element(By.CSS_SELECTOR, 'div input[placeholder*="last name"]').send_keys('inpetrean')  # * = marcator pentru valoare partiala a placeholderului
 
 sleep(3)
 chrome.quit()
