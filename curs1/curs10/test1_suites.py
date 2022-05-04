@@ -1,8 +1,15 @@
+from unittest import TestCase
+from selenium import webdriver
+from selenium.common.exceptions import NoSuchElementException, TimeoutException
+from selenium.webdriver.chrome.service import Service
+from selenium.webdriver.support.wait import WebDriverWait
+from webdriver_manager.chrome import ChromeDriverManager
+from selenium.webdriver.common.by import By
+from selenium.webdriver.support import expected_conditions as EC
 import unittest
-import HtmlTestRunner # pip install html-testRunner
 
-from ta8.sesiuni.intalnirea9.test4_unittest import Test
-from ta8.sesiuni.intalnirea9.test5_ex import Test2
+from curs1.curs9.Unit_test import Test
+from curs1.curs9.Unit_test2 import Test2
 
 
 class TestSuite(unittest.TestCase):

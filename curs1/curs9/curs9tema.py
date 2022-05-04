@@ -105,24 +105,24 @@ class Login(TestCase):
 #         label_result2 = self.chrome.find_element(By.XPATH,'//label[@for="password"]').text
 #         assert label_result2 == "Password"
 #
-# # Test10 : Completeaza cu user si pass valide. Click login
-# # Verifica ca noul url CONTINE /secure
-# # Foloseste un explicit wait pentru elementul cu clasa ’flash succes’
-# # Verifica ca elementul cu clasa=’flash succes’ este displayed
-# # Verifica ca mesajul de pe acest element CONTINE textul ‘secure area!’
-#     def test_valid_user_pas(self):
-#         self.chrome.find_element(By.ID, 'username').send_keys('tomsmith') # completam campul Username
-#         self.chrome.find_element(By.ID, 'password').send_keys('SuperSecretPassword!') # completam campul Password
-#         self.chrome.find_element(*self.LOGIN_BTN).click() # dam click pe buton
-#         actual_url = self.chrome.current_url
-#         expected_url = 'https://the-internet.herokuapp.com/secure'
-#         self.assertEqual(expected_url, actual_url, 'URL is incorrect')
-#         elem = WebDriverWait(self.chrome, 20).until(EC.presence_of_element_located((By.CLASS_NAME, 'flash success')))
-#         elem = self.chrome.find_element(By.CLASS_NAME, 'flash success')
-#         self.assertTrue(elem.is_displayed(), 'Submit btn nu e vizibil')
-#         actual_mess = self.chrome.find_element(By.CLASS_NAME, 'flash success').text
-#         expected_mess = 'secure area' #cum caut sa vad daca textul contine si nu este egal?
-#         self.assertEqual(expected_mess, actual_mess, 'Page title is incorrect')
+# Test10 : Completeaza cu user si pass valide. Click login
+# Verifica ca noul url CONTINE /secure
+# Foloseste un explicit wait pentru elementul cu clasa ’flash succes’
+# Verifica ca elementul cu clasa=’flash succes’ este displayed
+# Verifica ca mesajul de pe acest element CONTINE textul ‘secure area!’
+    def test_valid_user_pas(self):
+        self.chrome.find_element(By.ID, 'username').send_keys('tomsmith') # completam campul Username
+        self.chrome.find_element(By.ID, 'password').send_keys('SuperSecretPassword!') # completam campul Password
+        self.chrome.find_element(*self.LOGIN_BTN).click() # dam click pe buton
+        actual_url = self.chrome.current_url
+        expected_url = 'https://the-internet.herokuapp.com/secure'
+        self.assertEqual(expected_url, actual_url, 'URL is incorrect')
+        elem = WebDriverWait(self.chrome, 20).until(EC.presence_of_element_located((By.CLASS_NAME, 'flash')))
+        elem = self.chrome.find_element(By.CLASS_NAME, 'flash')
+        self.assertTrue(elem.is_displayed(), 'Submit btn nu e vizibil')
+        actual_mess = self.chrome.find_element(By.CLASS_NAME, 'success').text
+        expected_mess = 'secure area'
+        self.assertEqual(expected_mess in actual_mess, 'Page title is incorrect') # caut sa vad daca textul contine si nu este egal
 #
 # # Test11 : Completeaza cu user si pass valide. Click login. Click logout. Verifica ca ai ajuns pe https://the-internet.herokuapp.com/login
 #     def test_logout(self):

@@ -75,6 +75,7 @@ sleep(3)
 lista_elemente_clasa = chrome.find_elements(By.CLASS_NAME, 'form-group')
 
 lista_elemente_clasa[1].send_keys('Str Eliade')
+sleep(3)
 lista_elemente_clasa[2].send_keys('Str Mircea')
 lista_elemente_clasa[3].send_keys('Cluj')
 lista_elemente_clasa[4].send_keys('Cluj-Napoca')
