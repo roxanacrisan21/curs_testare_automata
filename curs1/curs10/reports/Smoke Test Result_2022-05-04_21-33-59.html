@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Test</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/3.3.6/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12">
+                <h2 class="text-capitalize">Test</h2>
+                <p class='attribute'><strong>Start Time: </strong>2022-05-04 21:33:59</p>
+                <p class='attribute'><strong>Duration: </strong>86.11 s</p>
+                <p class='attribute'><strong>Summary: </strong>Total: 4, Pass: 3
+                    
+                    , Error: 1
+                    
+                    
+                    
+                </p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12 col-sm-10 col-md-10">
+                <table class='table table-hover table-responsive'>
+                    <thead>
+                        <tr>
+                            <th>curs1.curs9.Unit_test.Test</th>
+                            <th>Status</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class='success'>
+                            <td class="col-xs-10">test_url_waits</td>
+                            <td class="col-xs-1">
+                                <span class="label label-success" style="display:block;width:45px;">Pass</span>
+                            </td>
+                            <td class="col-xs-1">
+                                <button class="btn btn-default btn-xs">View</button>
+                            </td>
+                        </tr>
+                        <tr style="display:none;">
+                            <td class="col-xs-9" colspan="3"><p>https://formy-project.herokuapp.com/thanks
+</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="3">
+                                Total: 1, Pass: 1
+                                
+                                
+                                
+                                
+                                
+                                -- Duration: 24.60 s
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12 col-sm-10 col-md-10">
+                <table class='table table-hover table-responsive'>
+                    <thead>
+                        <tr>
+                            <th>curs1.curs9.Unit_test2.Test2</th>
+                            <th>Status</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class='success'>
+                            <td class="col-xs-10">test_elem_visible</td>
+                            <td class="col-xs-1">
+                                <span class="label label-success" style="display:block;width:45px;">Pass</span>
+                            </td>
+                            <td class="col-xs-1">
+                            </td>
+                        </tr>
+                        <tr class='success'>
+                            <td class="col-xs-10">test_page_title</td>
+                            <td class="col-xs-1">
+                                <span class="label label-success" style="display:block;width:45px;">Pass</span>
+                            </td>
+                            <td class="col-xs-1">
+                            </td>
+                        </tr>
+                        <tr class='warning'>
+                            <td class="col-xs-10">test_url</td>
+                            <td class="col-xs-1">
+                                <span class="label label-warning" style="display:block;width:45px;">Error</span>
+                            </td>
+                            <td class="col-xs-1">
+                                <button class="btn btn-default btn-xs">View</button>
+                            </td>
+                        </tr>
+                        <tr style="display:none;">
+                            <td class="col-xs-9" colspan="3"><p style="color:maroon;">NoSuchElementException: Message: no such element: Unable to locate element: {"method":"xpath","selector":"//a[text()="Contact us"]"}
+  (Session info: chrome=100.0.4896.127)
+Stacktrace:
+Backtrace:
+	Ordinal0 [0x00767413+2389011]
+	Ordinal0 [0x006F9F61+1941345]
+	Ordinal0 [0x005EC658+837208]
+	Ordinal0 [0x006191DD+1020381]
+	Ordinal0 [0x0061949B+1021083]
+	Ordinal0 [0x00646032+1204274]
+	Ordinal0 [0x00634194+1130900]
+	Ordinal0 [0x00644302+1196802]
+	Ordinal0 [0x00633F66+1130342]
+	Ordinal0 [0x0060E546+976198]
+	Ordinal0 [0x0060F456+980054]
+	GetHandleVerifier [0x00919632+1727522]
+	GetHandleVerifier [0x009CBA4D+2457661]
+	GetHandleVerifier [0x007FEB81+569713]
+	GetHandleVerifier [0x007FDD76+566118]
+	Ordinal0 [0x00700B2B+1968939]
+	Ordinal0 [0x00705988+1989000]
+	Ordinal0 [0x00705A75+1989237]
+	Ordinal0 [0x0070ECB1+2026673]
+	BaseThreadInitThunk [0x76BFFA29+25]
+	RtlGetAppContainerNamedObjectPath [0x77207A7E+286]
+	RtlGetAppContainerNamedObjectPath [0x77207A4E+238]
+</p><p style="color:maroon;">Traceback (most recent call last):
+  File "C:\Users\Rox\Documents\GitHub\curs_testare_automata\curs1\curs9\Unit_test2.py", line 27, in setUp
+    self.chrome.find_element(*self.CONTACT_US).click()
+  File "C:\Users\Rox\PycharmProjects\curstestareautomata\venv\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 1248, in find_element
+    return self.execute(Command.FIND_ELEMENT, {
+  File "C:\Users\Rox\PycharmProjects\curstestareautomata\venv\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 425, in execute
+    self.error_handler.check_response(response)
+  File "C:\Users\Rox\PycharmProjects\curstestareautomata\venv\lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 247, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.NoSuchElementException: Message: no such element: Unable to locate element: {"method":"xpath","selector":"//a[text()="Contact us"]"}
+  (Session info: chrome=100.0.4896.127)
+Stacktrace:
+Backtrace:
+	Ordinal0 [0x00767413+2389011]
+	Ordinal0 [0x006F9F61+1941345]
+	Ordinal0 [0x005EC658+837208]
+	Ordinal0 [0x006191DD+1020381]
+	Ordinal0 [0x0061949B+1021083]
+	Ordinal0 [0x00646032+1204274]
+	Ordinal0 [0x00634194+1130900]
+	Ordinal0 [0x00644302+1196802]
+	Ordinal0 [0x00633F66+1130342]
+	Ordinal0 [0x0060E546+976198]
+	Ordinal0 [0x0060F456+980054]
+	GetHandleVerifier [0x00919632+1727522]
+	GetHandleVerifier [0x009CBA4D+2457661]
+	GetHandleVerifier [0x007FEB81+569713]
+	GetHandleVerifier [0x007FDD76+566118]
+	Ordinal0 [0x00700B2B+1968939]
+	Ordinal0 [0x00705988+1989000]
+	Ordinal0 [0x00705A75+1989237]
+	Ordinal0 [0x0070ECB1+2026673]
+	BaseThreadInitThunk [0x76BFFA29+25]
+	RtlGetAppContainerNamedObjectPath [0x77207A7E+286]
+	RtlGetAppContainerNamedObjectPath [0x77207A4E+238]
+
+
+
+====== WebDriver manager ======
+Current google-chrome version is 100.0.4896
+Get LATEST chromedriver version for 100.0.4896 google-chrome
+Driver [C:\Users\Rox\.wdm\drivers\chromedriver\win32\100.0.4896.60\chromedriver.exe] found in cache
+</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="3">
+                                Total: 3, Pass: 2
+                                
+                                , Error: 1
+                                
+                                
+                                
+                                -- Duration: 61.51 s
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.bootcdn.net/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $('td').on('click', '.btn', function(e){
+                e.preventDefault();
+                e.stopImmediatePropagation();
+                var $this = $(this);
+                var $nextRow = $this.closest('tr').next('tr');
+                $nextRow.slideToggle("fast");
+                $this.text(function(i, text){
+                    if (text === 'View') {
+                        return 'Hide';
+                    } else {
+                        return 'View';
+                    };
+                });
+            });
+        });
+    </script>
+</body>
+</html>

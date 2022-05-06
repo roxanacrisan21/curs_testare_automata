@@ -1,4 +1,6 @@
 import unittest
+from time import sleep
+
 from selenium import webdriver
 from selenium.common.exceptions import NoSuchElementException, TimeoutException
 from selenium.webdriver.chrome.service import Service
@@ -19,7 +21,8 @@ class Test2(unittest.TestCase):
         self.chrome = webdriver.Chrome(service=s)
         self.chrome.maximize_window()
         self.chrome.get('http://automationpractice.com/index.php') #url de start
-        self.chrome.implicitly_wait(10)
+        # self.chrome.implicitly_wait(10)
+        sleep(3)
         # se gaseste un element-> se da click pe el"contact us->ajungem pe un nou url
         self.chrome.find_element(*self.CONTACT_US).click()
 

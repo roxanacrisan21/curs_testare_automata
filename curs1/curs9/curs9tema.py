@@ -122,7 +122,7 @@ class Login(TestCase):
         self.assertTrue(elem.is_displayed(), 'Submit btn nu e vizibil')
         actual_mess = self.chrome.find_element(By.CLASS_NAME, 'success').text
         expected_mess = 'secure area'
-        self.assertEqual(expected_mess in actual_mess, 'Page title is incorrect') # caut sa vad daca textul contine si nu este egal
+        self.assertTrue(expected_mess in actual_mess, 'Page title is incorrect') # caut sa vad daca textul contine si nu este egal
 #
 # # Test11 : Completeaza cu user si pass valide. Click login. Click logout. Verifica ca ai ajuns pe https://the-internet.herokuapp.com/login
 #     def test_logout(self):
@@ -134,3 +134,8 @@ class Login(TestCase):
 #         expected_url = 'https://the-internet.herokuapp.com/login'
 #         self.assertEqual(expected_url, actual_url, 'URL is incorrect')
 #
+# BONUS : Test 12
+# ajutor :
+# text = driver.findElementBy().text
+# text1 = text[:text.find(" ")]
+# text = text[text.find(" "):]

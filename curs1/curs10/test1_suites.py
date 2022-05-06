@@ -7,6 +7,7 @@ from webdriver_manager.chrome import ChromeDriverManager
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support import expected_conditions as EC
 import unittest
+import HtmlTestRunner
 
 from curs1.curs9.Unit_test import Test
 from curs1.curs9.Unit_test2 import Test2
